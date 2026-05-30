@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ChaoticCupid.PersonClient/ChaoticCupid.PersonClient.csproj" />
+  <Project Path="ChaoticCupid.Server/ChaoticCupid.Server.csproj" />
+  <Project Path="ChaoticCupid.Shared/ChaoticCupid.Shared.csproj" />
+</Solution>
