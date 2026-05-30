@@ -1,0 +1,27 @@
+## Build outputs
+bin/
+obj/
+out/
+build/
+
+## IDE
+.vs/
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+
+## NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.lock.json
+
+## Misc
+*.bak
+*.tmp
+Thumbs.db
+.DS_Store
