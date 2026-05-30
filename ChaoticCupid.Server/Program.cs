@@ -1,3 +1,4 @@
+using ChaoticCupid.Server.Contracts;
 using ChaoticCupid.Server.Hubs;
 using ChaoticCupid.Server.Services;
 
@@ -7,6 +8,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
 builder.Services.AddSingleton<IPersonRegistry, PersonRegistry>();
+builder.Services.AddSingleton<ICupid, CupidService>();
+builder.Services.AddHostedService<CupidBackgroundService>();
 
 var app = builder.Build();
 
