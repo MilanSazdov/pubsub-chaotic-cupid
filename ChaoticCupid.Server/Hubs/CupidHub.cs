@@ -82,6 +82,10 @@ public sealed class CupidHub : Hub, IPerson
         if (person is null || string.IsNullOrWhiteSpace(username)) return Task.CompletedTask;
 
         var target = username.Trim();
+
+        if (target.Equals(person.Username, StringComparison.OrdinalIgnoreCase))
+            return Clients.Caller.SendAsync("Notification", "You cannot block yourself.");
+
         person.Block(target);
         _log.LogInformation("[SERVER] {From} blocked {Target}", person.Username, target);
         return Clients.Caller.SendAsync("Notification", $"You blocked '{target}'.");
